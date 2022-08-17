@@ -3,7 +3,7 @@ body {
 	height: 100vh;
 }
 
-p {
+p, h2, h3, h4 {
 	margin: 0;
 }
 
@@ -112,7 +112,97 @@ p {
 }
 
 #content {
-	background-color: gray;
+	background-color: rgb(230, 230, 230);
 	grid-column: 2 / -1;
 	grid-row: 2 / -1;
+	display: grid;
+	grid-template-columns: 2.2fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	padding: 20px;
+}
+
+.content-section {
+	background-color: white;
+	border-radius: 12px;
+	padding: 16px;
+	box-shadow: 2px 2px 3px 1px rgb(200, 200, 200);
+}
+
+#projects-section {
+	grid-row: 1 / -1;
+}
+
+.project {
+	grid-column: 1 / 2;
+	grid-row: 1 / -1;
+	background-color: white;
+	border-left: 8px solid yellow;
+	border-radius: 10px;
+	height: 200px;
+	width: 300px;
+	padding: 20px;
+	display: grid;
+	grid-template-rows: 1fr 2fr 1fr;
+}
+
+.project > h3 {
+	align-self: end;
+}
+
+.project > p {
+	align-self: start;
+}
+
+.project > div {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	justify-content: end;
+	justify-items: center;
+	align-items: center;
+	gap: 24px;
+}
+
+#announcements-section > div >:last-child {
+	border-bottom: none;
+}
+
+.announcement {
+	display: grid;
+	grid-template-rows: auto auto;
+	border-bottom: 1px solid gray;
+}
+
+.announcement > h4 {
+	align-self: end;
+}
+
+.announcement > p {
+	align-self: start;
+}
+
+#trending-section > div {
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+	gap: 12px;
+}
+
+.trend {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: 1fr 1fr;
+	column-gap: 16px;
+	row-gap: 2px;
+}
+
+.trend > img {
+	width: 50px;
+	grid-row: 1 / -1;
+}
+
+.trend > .username {
+	align-self: end;
+}
+
+.trend-project-title {
+	color: rgb(100, 100, 100);
 }

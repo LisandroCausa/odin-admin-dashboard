@@ -1,3 +1,8 @@
+@font-face {
+	font-family: "username-font";
+	src: url("./fonts/FiraSans-Bold.ttf");
+}
+
 body {
 	margin: 0;
 	height: 100vh;
@@ -13,7 +18,7 @@ p, h2, h3, h4 {
 
 .username {
 	font-weight: 900;
-	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-family: username-font, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 #main-container {
@@ -28,11 +33,14 @@ p, h2, h3, h4 {
 	background-color: white;
 	grid-column: 2 / -1;
 	grid-row: 1 / 2;
-	padding: 8px 32px;
+	padding: 8px 44px;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	grid-template-rows: auto 1fr;
 	align-items: center;
+	row-gap: 16px;
+	box-shadow: 0 3px 6px 0px rgb(194, 194, 194);
+	z-index: 1;
 }
 
 #header > :nth-child(1) {
@@ -44,13 +52,17 @@ p, h2, h3, h4 {
 }
 
 #header > :nth-child(1) > input {
-	background-color: rgb(218, 218, 218);
-	width: 500px;
+	background-color: rgb(231, 231, 231);
+	width: 30vw;
 	height: 24px;
 	font-size: 1.2rem;
-	border-radius: 10px;
+	border-radius: 12px;
 	border: none;
-	padding: 1px 6px;
+	padding: 4px 6px;
+}
+
+#header > :nth-child(1) > img {
+	width: 28px;
 }
 
 #header > :nth-child(2) {
@@ -64,7 +76,15 @@ p, h2, h3, h4 {
 }
 
 #header > :nth-child(2) > img {
+	width: 28px;
+}
+
+#header > :nth-child(2) > .profile-photo {
 	width: 50px;
+}
+
+#header > :nth-child(2) > .username {
+	font-size: 1.1rem;
 }
 
 #header > :nth-child(3) {
@@ -84,6 +104,15 @@ p, h2, h3, h4 {
 	display: grid;
 	grid-template-rows: auto 1fr;
 	gap: 8px;
+}
+
+#header > :nth-child(3) > div > p {
+	font-family: username-font, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 0.9rem;
+}
+
+#header > :nth-child(3) > div > .username {
+	font-size: 1.5rem;
 }
 
 #header > :nth-child(4) {
@@ -110,6 +139,7 @@ p, h2, h3, h4 {
 	align-content: start;
 	gap: 32px;
 	padding: 16px;
+	z-index: 2;
 }
 
 #sidebar img {

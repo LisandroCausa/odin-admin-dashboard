@@ -3,6 +3,15 @@
 	src: url("./fonts/FiraSans-Bold.ttf");
 }
 
+:root {
+	--first-color: #1C658C;
+	--second-color: #398AB9;
+	--second-color-complementary: #B96839;
+	--third-color: #D8D2CB;
+	--fourth-color: #EEEEEE;
+	--fourth-color-monochromatic: #D4D4D4;
+}
+
 body {
 	margin: 0;
 	height: 100vh;
@@ -30,7 +39,7 @@ p, h2, h3, h4 {
 }
 
 #header {
-	background-color: white;
+	background-color: var(--fourth-color);
 	grid-column: 2 / -1;
 	grid-row: 1 / 2;
 	padding: 8px 44px;
@@ -52,7 +61,7 @@ p, h2, h3, h4 {
 }
 
 #header > :nth-child(1) > input {
-	background-color: rgb(231, 231, 231);
+	background-color: var(--fourth-color-monochromatic);
 	width: 30vw;
 	height: 24px;
 	font-size: 1.2rem;
@@ -122,7 +131,7 @@ p, h2, h3, h4 {
 }
 
 #header > :nth-child(4) > button {
-	background-color: rgb(42, 162, 218);
+	background-color: var(--second-color);
 	border: none;
 	border-radius: 18px;
 	padding: 10px;
@@ -132,7 +141,7 @@ p, h2, h3, h4 {
 
 
 #sidebar {
-	background-color: aqua;
+	background-color: var(--first-color);
 	grid-column: 1 / 2;
 	grid-row: 1 / -1;
 	display: grid;
@@ -184,7 +193,7 @@ p, h2, h3, h4 {
 
 
 #content {
-	background-color: rgb(230, 230, 230);
+	background-color: var(--third-color);
 	grid-column: 2 / -1;
 	grid-row: 2 / -1;
 	display: grid;
@@ -199,7 +208,7 @@ p, h2, h3, h4 {
 }
 
 .content-section {
-	background-color: white;
+	background-color: var(--fourth-color);
 	border-radius: 12px;
 	padding: 16px;
 	box-shadow: 2px 2px 3px 1px rgb(200, 200, 200);
@@ -218,8 +227,7 @@ p, h2, h3, h4 {
 }
 
 .project {
-	background-color: white;
-	border-left: 8px solid yellow;
+	border-left: 8px solid var(--second-color-complementary);
 	border-radius: 10px;
 	height: 200px;
 	padding: 20px;

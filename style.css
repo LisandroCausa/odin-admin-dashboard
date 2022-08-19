@@ -3,6 +3,11 @@
 	src: url("./fonts/FiraSans-Bold.ttf");
 }
 
+@font-face {
+	font-family: "main-font";
+	src: url("./fonts/Cabin-Medium.ttf");
+}
+
 :root {
 	--first-color: #1C658C;
 	--second-color: #398AB9;
@@ -17,8 +22,13 @@ body {
 	height: 100vh;
 }
 
-p, h2, h3, h4 {
+p, h2, h3, h4, button {
 	margin: 0;
+	font-family: main-font,'Courier New', Courier, monospace;
+}
+
+.description {
+	color: gray;
 }
 
 .profile-photo {
@@ -137,6 +147,11 @@ p, h2, h3, h4 {
 	padding: 10px;
 	color: white;
 	font-weight: 900;
+	transition: 600ms;
+}
+
+#header > :nth-child(4) > button:hover {
+	background-color: var(--first-color);
 }
 
 
@@ -146,7 +161,7 @@ p, h2, h3, h4 {
 	grid-row: 1 / -1;
 	display: grid;
 	align-content: start;
-	gap: 32px;
+	gap: 40px;
 	padding: 16px;
 	z-index: 2;
 }
@@ -157,7 +172,7 @@ p, h2, h3, h4 {
 }
 
 #sidebar p {
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	color: white;
 	font-weight: 900;
 }
@@ -181,7 +196,7 @@ p, h2, h3, h4 {
 #sidebar > div {
 	margin-left: 10px;
 	display: grid;
-	gap: 10px;
+	gap: 20px;
 }
 
 #sidebar > div > div {
@@ -199,7 +214,7 @@ p, h2, h3, h4 {
 	display: grid;
 	grid-template-columns: 2.2fr 1fr;
 	grid-template-rows: 1fr 1fr;
-	padding: 20px;
+	padding: 30px 20px;
 	gap: 24px;
 }
 
@@ -241,6 +256,7 @@ p, h2, h3, h4 {
 
 .project > p {
 	align-self: start;
+	font-size: 1.15rem;
 }
 
 .project > div {
@@ -304,8 +320,4 @@ p, h2, h3, h4 {
 
 .trend > .username {
 	align-self: end;
-}
-
-.trend-project-title {
-	color: rgb(100, 100, 100);
 }
